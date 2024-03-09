@@ -20,7 +20,7 @@ This Python-based Command-Line Interface (CLI) script allows users to obtain det
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/SAQLAINAP/VidTime.git
    ```
 
 2. Install the required dependencies:
