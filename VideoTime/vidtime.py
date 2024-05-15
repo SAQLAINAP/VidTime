@@ -30,7 +30,7 @@ try:
         elif length <= freew * 3600 * 24 * 4:
             print("You can complete the playlist in 4 days")
         else:
-            print("You can complete the playlist in more than 4 days")
+            print("You can complete the playlist in more than 96 HOURS")
 
     def print_video_stats(video):
         length_minutes = video.length // 60
