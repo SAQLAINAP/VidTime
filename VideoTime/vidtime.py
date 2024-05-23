@@ -1,7 +1,9 @@
 from pytube import YouTube as yt, Playlist as pl
+import math
 
 try:
 
+    
     def get_playlist_length(playlist):
         length = 0
         for video in playlist.videos:
@@ -17,20 +19,11 @@ try:
         print("Total length of the playlist:", length_hours, "hours")
 
     def print_completion_time(length, freew):
-        if length <= freew * 3600:
+        x = round(length/(freew*3600))
+        if x == 0:
             print("You can complete the playlist in under a day")
-        elif length <= freew * 3600 * 24:
-            print("You can complete the playlist in approximately a day")
-        elif length <= freew * 3600 * 24 * 7:
-            print("You can complete the playlist in a week")
-        elif length <= freew * 3600 * 24 * 2:
-            print("You can complete the playlist in 2 days")
-        elif length <= freew * 3600 * 24 * 3:
-            print("You can complete the playlist in 3 days")
-        elif length <= freew * 3600 * 24 * 4:
-            print("You can complete the playlist in 4 days")
         else:
-            print("You can complete the playlist in more than 4 days")
+            print(f"You can complete the playlist in {x} week")
 
     def print_video_stats(video):
         length_minutes = video.length // 60
